@@ -9,8 +9,8 @@ services:
       restart: always
       ports:
         - "8000:80"
-      labels:
-        - 'com.centurylinklabs.watchtower.enable=true' 
+      # labels:
+      #   - 'com.centurylinklabs.watchtower.enable=true' 
     watchtower:
       image: containrrr/watchtower
       container_name: watchtower
