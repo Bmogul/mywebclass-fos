@@ -1,16 +1,16 @@
 version: "3.8"
 
 services:
-    master_branch:
+    # master_branch:
     development_branch:
-      image: bmogul/mywebclass-fos
+      image: bmogul/mywebclass-simulation:development
       container_name: development_branch
       pull_policy: always
       restart: always
       ports:
         - "8000:80"
-      # labels:
-      #   - 'com.centurylinklabs.watchtower.enable=true' 
+      labels:
+        - 'com.centurylinklabs.watchtower.enable=true' 
     watchtower:
       image: containrrr/watchtower
       container_name: watchtower
