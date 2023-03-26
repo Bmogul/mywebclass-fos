@@ -40,38 +40,7 @@ header {
 	z-index: 999;
 }
 
-.navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
 
-.logo {
-	font-size: 24px;
-	color: #333;
-	text-transform: uppercase;
-}
-
-.nav-links {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-.nav-links li {
-	margin-left: 20px;
-}
-
-.nav-links li a {
-	color: #333;
-	font-weight: 600;
-	transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-	color: #ff6b6b;
-}
 
 /* Title section styles */
 
@@ -165,3 +134,16 @@ footer {
 		margin-bottom: 30px;
 	}
 }
+
+/* body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+  } */
+  
