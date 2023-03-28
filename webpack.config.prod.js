@@ -39,61 +39,24 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(png|jpg|ico)$/i,
-        type: 'asset',
-        use: [{
-          loader: 'image-webpack-loader',
-          options: {
-            pngquant: {
-              quality: [0.90, 0.95]
-            }
-          }
-        }],
-        parser: {
-          dataUrlCondition: {
-            maxSize: 10 * 1024 // 10kb
-          }
-        },
-        generator: {
-          filename: 'assets/images/[name]-[hash][ext]'
-        }
-      },
-      {
-        test: /\.(webmanifest)$/i,
-        type: 'asset/resource'
-      },
-      {
-        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/i,
-        type: 'asset/resource',
-        generator: {
-          // filename: 'fonts/[name]-[hash][ext][query]'
-          filename: 'fonts/[name][ext][query]'
-        }
-      },
-      {
         test: /\.(scss)$/,
-        use: [{
-          loader: 'style-loader'
-        },
-        {
-          loader: 'css-loader'
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            postcssOptions: {
-              plugins: () => [
-                require('autoprefixer')
-              ]
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: () => [
+                  require('autoprefixer')
+                ]
+              }
             }
-          }
-        },
-        {
-          loader: 'sass-loader'
-        }
-
+          },
+          'sass-loader'
         ]
-      }]
+      }
+    ]
   }
 
 }
