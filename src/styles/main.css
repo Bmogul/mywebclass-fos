@@ -46,16 +46,17 @@ header {
 /* Title section styles */
 
 .title-section {
-	background-image: url('https://images.unsplash.com/photo-1569785231568-635834e4f4ff');
 	background-size: cover;
 	background-position: center;
-	height: 500px;
+	height: 800px;
+    width: 800px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	color: #fff;
 	background-color: rgba(0,0,0,0.7);
+    border-radius: 200%;
 }
 
 .title-section h1 {
@@ -69,12 +70,25 @@ header {
 	font-size: 24px;
 	color: #fff;
 	text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    
 }
 
 /* About section styles */
 
 .about-section {
+    float: right;
 	padding: 100px 20px;
+    height: 800px;
+    width: 800px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 200%;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .about-section h2 {
@@ -88,6 +102,7 @@ header {
 	line-height: 1.8;
 	text-align: justify;
 	margin-bottom: 50px;
+    width: 50%;
 }
 
 /* Footer styles */
@@ -97,6 +112,7 @@ footer {
 	color: #fff;
 	padding: 20px;
 	text-align: center;
+    position: fixed;
 }
 
 /* Media queries */
