@@ -15,13 +15,13 @@ RUN npm install
 COPY . .
 
 # Build the webpack site and output it to the docs directory
-RUN npm run build
+# RUN npm run build
 
 # Use a multiarch Nginx runtime as a parent image
 FROM --platform=$TARGETPLATFORM nginx:latest
 
 # Copy the output of the webpack build from the builder stage to the nginx image
-COPY --from=builder /app/docs /usr/share/nginx/html
+# COPY --from=builder /app/docs /usr/share/nginx/html
 
 # Expose port 80 for HTTP traffic
 EXPOSE 80
