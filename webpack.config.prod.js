@@ -16,12 +16,12 @@ while (directories.length > 0) {
 
 module.exports = {
   mode: 'production',
-  entry: './src/js/main.js',
-  output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, './docs'),
-    clean: true
-  },
+  // entry: './src/js/main.js',
+  // output: {
+  //   filename: 'index.js',
+  //   path: path.resolve(__dirname, './docs'),
+  //   clean: true
+  // },
   devtool: 'source-map',
   plugins: [
     ...htmlFiles.map(htmlFile =>
