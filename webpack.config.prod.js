@@ -39,7 +39,7 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(scss)$/,
+        test: /\.(styles)$/,
         use: [
           'style-loader',
           'css-loader',
