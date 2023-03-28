@@ -16,7 +16,7 @@ while (directories.length > 0) {
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/main.js',
+  entry: './src/index.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, './docs'),
@@ -39,24 +39,29 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(scss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: () => [
-                  require('autoprefixer')
-                ]
-              }
+        test: /\.(styles)$/,
+        use: [{
+          loader: 'style-loader'
+        },
+        {
+          loader: 'css-loader'
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: () => [
+                require('autoprefixer')
+              ]
             }
-          },
-          'sass-loader'
+          }
+        },
+        {
+          loader: 'sass-loader'
+        }
+
         ]
-      }
-    ]
+      }]
   }
 
 }
